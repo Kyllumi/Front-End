@@ -12,24 +12,26 @@
 <body>
     <!-- Header -->
     <header>
-        <img src="img/logo.svg" alt="logo">
-        <h2>Epicode - Il blog dei developers</h2>
-    </header>
+        <div>
+            <img src="img/logo.svg" alt="logo">
+            <h2>Epicode - Il blog dei developers</h2>
+        </div>
 
-    <!-- Nav -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Articoli</a></li>
-            <li><a href="#">Lavora con noi</a></li>
-        </ul>
-    </nav>
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articoli</a></li>
+                <li><a href="#">Lavora con noi</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Inizio Main -->
     <main>
         <section>
             <h1>Come creare un template per i post</h1>
-            <address> di Mario Rossi - pubblicato il 25-10-2020</address>
+            <p>di Mario Rossi - <span>pubblicato il 25-10-2020</span></p>
 
             <p>
                 La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da
@@ -37,25 +39,24 @@
             </p>
 
             <p>
-            <ul>
                 Le varie aree saranno quindi suddivise in:
+            </p>
+            <ul>
                 <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
                 <li>Contenuti centrali variabili del tag <code>&lt;main&gt;</code> (corpo principale)</li>
                 <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt;footer&gt;</code></li>
             </ul>
-            </p>
 
             <h4>Formattazione del codice</h4>
-
             <p>
                 Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS.
                 Perciò i passi saranno:
+            </p>
             <ol>
                 <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
                 <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
                 <li>Applicare gli stili CSS</li>
             </ol>
-            </p>
 
             <p>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressoché totale.</p>
 
