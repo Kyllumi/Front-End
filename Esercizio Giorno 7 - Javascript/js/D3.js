@@ -121,7 +121,7 @@ console.log(characters);
 */
 let femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender == "female") {
+  if (starWarsCharacters[i].gender === "female") {
     femaleCharacters.push(starWarsCharacters[i]);
   }
 }
@@ -196,13 +196,13 @@ console.log(crewMass);
 */
 if (crewMass < 500) {
   console.log("Ship is under loaded");
-} else if (crewMass > 500 && crewMass < 699) {
+} else if (crewMass >= 500 && crewMass <= 699) {
   console.log("Ship is half loaded");
-} else if (crewMass > 700 && crewMass < 899) {
+} else if (crewMass >= 700 && crewMass <= 899) {
   console.log("Warning: Load is over 700");
-} else if (crewMass > 900 && crewMass < 999) {
+} else if (crewMass >= 900 && crewMass <= 999) {
   console.log("Critical Load: Over 900");
-} else if (crewMass > 1000) {
+} else if (crewMass >= 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
 }
 
@@ -211,7 +211,6 @@ if (crewMass < 500) {
 */
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "n/a") {
-    delete starWarsCharacters[i].gender;
     starWarsCharacters[i].gender = "robot";
   }
 }
@@ -223,19 +222,18 @@ console.log(starWarsCharacters);
 */
 console.log(characters);
 
-for(let i = 0; i < characters.length; i++){
-  for(let x = 0; x < femaleCharacters.length; x++){
-    if(characters[i] === femaleCharacters[x].name){
+for (let i = 0; i < characters.length; i++) {
+  for (let x = 0; x < femaleCharacters.length; x++) {
+    if (characters[i] === femaleCharacters[x].name) {
       characters.splice(i, 1);
     }
   }
-};
+}
 console.log(characters);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 
-let random = (parseInt((Math.random(starWarsCharacters)) * 10));
-
-
+let random = Math.floor(Math.random(starWarsCharacters) * 10);
+console.log(starWarsCharacters[random]);
