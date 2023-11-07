@@ -28,7 +28,6 @@ function crazySum(x, y) {
     return x + y;
   }
 }
-let sum = crazySum();
 
 console.log(crazySum(4, 4));
 
@@ -42,16 +41,15 @@ console.log(crazySum(4, 4));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function crazyDiff(x, y) {
+function crazyDiff(x) {
   if (x > 19) {
-    return Math.abs(x - y) * 3;
+    return Math.abs(x - 19) * 3;
   } else {
-    return Math.abs(x - y);
+    return Math.abs(x - 19);
   }
 }
-let diff = crazyDiff(-6, 19);
+console.log(crazyDiff(25));
 
-console.log(diff);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -66,9 +64,7 @@ function boundary(n) {
     return false;
   }
 }
-let bound = boundary();
-
-console.log(bound);
+console.log(boundary(98));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -77,16 +73,16 @@ console.log(bound);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function epify() {
-  if (stringa1.startsWith("EPICODE")) {
-    return stringa1;
+function epify(str) {
+  if (str.startsWith("EPICODE")) {
+    return str;
   } else {
-    return "EPICODE - " + stringa1;
+    return "EPICODE - " + str;
   }
 }
 
 let stringa1 = "EPICODE - Inizia a diventare un Sviluppatore";
-console.log(epify());
+console.log(epify(stringa1));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -151,7 +147,7 @@ let stringa4 = "*Questa è una stringa*"
 console.log(stringa4);
 
 function cutString(x) {
-      return String(x.slice(1, 21));
+      return x.slice(1, -1);
 };
 
 console.log(cutString(stringa4));
@@ -173,5 +169,5 @@ function giveMeRandom(n) {
     return randNumb;
 };
 
-console.log(giveMeRandom(10));
+console.log(giveMeRandom(17));
 
