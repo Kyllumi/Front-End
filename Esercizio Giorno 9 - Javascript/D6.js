@@ -6,7 +6,7 @@ let stringa1 = "questa è la prima stringa";
 let stringa2 = "questa è la seconda stringa";
 
 function strUpper(str1, str2) {
-  return (str1.slice(0, 2) + str2.slice(0, 3)).toUpperCase();
+  return (str1.slice(0, 2) + str2.slice(-3)).toUpperCase();
 }
 console.log(strUpper(stringa1, stringa2));
 
@@ -44,7 +44,7 @@ console.log(acc);
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-let sum = array2.reduce((acc, value) => acc + value, 0);
+let sum = array2.reduce((acc, value) => (acc += value), 0);
 console.log(sum);
 
 /* ESERCIZIO 6 (map)
@@ -66,8 +66,8 @@ console.log(newStrArray);
 */
 let oddArray = [];
 for (let i = 0; i < 100; i++) {
-  if ([i] % 2 === 1) {
-    oddArray.push([i]);
+  if (i % 2 === 1) {
+    oddArray.push(i);
   }
 }
 console.log(oddArray);
@@ -205,7 +205,7 @@ console.log(oldestFilm);
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
-let filmNum = [movies.length - 1];
+let filmNum = [movies.length];
 console.log(filmNum);
 
 /* ESERCIZIO 11 (map)
@@ -229,11 +229,15 @@ console.log(totYear);
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-let imdbFind = movies.find((i) => i.imdbID === "tt0167261");
-console.log(imdbFind);
+let searchFilm = function (arr, id) {
+  return arr.find((film) => film.imdbID === id);
+};
+console.log(searchFilm(movies, "tt0167261"));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
-let imdbFindIndex = movies.find((i) => i.Year === "2002");
-console.log(imdbFindIndex);
+let searchIndexFilm = function (arr, year) {
+  return arr.findIndex((film) => film.Year === year);
+};
+console.log(searchIndexFilm(movies, "2012"));
