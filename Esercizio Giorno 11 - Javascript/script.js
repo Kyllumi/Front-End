@@ -1,47 +1,42 @@
-const formInput = document.querySelector("#tasks form input");
-const addTask = document.querySelector("#tasks form button");
-const tasks = document.querySelector("div.tasks");
-const singleTask = document.querySelectorAll("div.tasks div");
+const addBtn = document.querySelector("#addBtn");
 
-addTask.addEventListener("click", () => {
-  // ottengo il valore dell'input al click
-  let taskTitle = formInput.value;
+// Aggiungo evento al click del pulsante
+addBtn.addEventListener("click", () => {
+  // Leggo il valore dell'utente dal form
+  let input = document.querySelector("form input");
+  // Task avrà il valore dell'input pulito degli spazi vuoti laterali
+  let task = input.value.trim();
 
-  // controllo la lunghezza dell'input
-  if (taskTitle.length < 2) {
-    alert("Inserisci almeno 2 caratteri per la task!");
-    return;
+  // Valido l'input dell'utente
+  if (task.length > 2) {
+    // Se la lunghezza del valore è maggiore di 2, creo un li
+    let li = document.createElement("li");
+    // Creo uno span (utile per il css)
+    let span = document.createElement("span");
+    // Assegno allo span il valore dell'input
+    span.innerText = task;
+    span.addEventListener("click", function (e) {
+      e.target.className =
+        e.target.className === "completed" ? "" : "completed";
+    });
+
+    // Appendo lo span al li
+    li.appendChild(span);
+    // Creo il pulsante di eliminazione e assegno un valore
+    let deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "X";
+    // Ci aggiungo un evento
+    deleteBtn.addEventListener("click", (e) => {
+      let li = e.target.parentNode;
+      li.remove();
+    });
+    
+    // Appendo il pulsante
+    li.appendChild(deleteBtn);
+    // Appendo li creato all'ul
+    let ul = document.querySelector("div.lista ul");
+    ul.appendChild(li);
+    // Una volta inserita la task, svuoto il campo input
+    input.value = "";
   }
-
-  // creo l'elemento e imposto il testo
-  let task = document.createElement("div");
-  task.id = "task";
-  let taskSpan = document.createElement("span");
-  taskSpan.className = "task-title";
-  taskSpan.innerText = taskTitle;
-  task.appendChild(taskSpan);
-
-  // creo il pulsante
-  let deleteBtn = document.createElement("button");
-  deleteBtn.className = "deleteBtn";
-  deleteBtn.innerText = "Elimina";
-
-  // aggiungo alla sezione tasks
-  tasks.appendChild(task);
-  task.appendChild(deleteBtn);
-
-  task.addEventListener("click", () => {
-    // Quando si fa clic su un singolo task, aggiungp o rimuovo il line-through
-    taskSpan.style.textDecoration =
-      taskSpan.style.textDecoration === "line-through"
-        ? "none"
-        : "line-through";
-  });
-
-  deleteBtn.addEventListener("click", () => {
-    // Rimuovi il task quando il pulsante Elimina viene cliccato
-    tasks.removeChild(task);
-  });
-
-  formInput.value = "";
 });

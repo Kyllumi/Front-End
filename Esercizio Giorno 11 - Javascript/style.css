@@ -1,68 +1,60 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 auto;
 }
 
 body {
-  width: 100vw;
-  background-color: #4f6367;
-  font-size: 1.2em;
+  background-image: url(images/1331117.png);
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  font-size: 2em;
 }
 
 .container {
-  border: 1px solid black;
-  border-radius: 1em;
-  background-color: #b8d8d8;
+  text-align: center;
+  width: 100%;
+}
+
+.container .content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2em 2em 0 2em;
+}
+
+.container .content form input {
   width: 80%;
 }
-
-.container form {
+.container .content form input,
+.container .content form button {
   padding: 2em;
-  width: 100%;
-  text-align: center;
 }
 
-.container form input {
-  border-radius: 1em;
-  padding: 1em 10em 1em 1em;
-  width: 82%;
+.container ul {
+  list-style: none;
+  width: 90%;
+  margin: 1em auto;
+}
+
+.container ul li {
   text-align: left;
 }
 
-.container form button {
-  border-radius: 1em;
-  padding: 1em 2em 1em 2em;
-  width: 15%;
-  font-weight: bold;
-}
-
-.container div.tasks {
-  width: 88%;
-  margin: 0 auto 1em auto;
-}
-
-.container .tasks div {
-  background-color: #eef5db;
-  padding: 1em;
-  border-radius: 1em;
-  border: 1px solid black;
-  margin: 1em 0;
-}
-
-span.task-title,
-button.deleteBtn {
+.container ul li span {
+  width: 80%;
   display: inline-block;
+  padding: 0.5em 4em 0.5em 0.5em;
 }
 
-span.task-title {
-  width: 90%;
-}
-
-button.deleteBtn {
-  height: 2em;
-  width: 5em;
+.container ul li button {
+  width: 10%;
+  font-size: 0.8em;
   background-color: red;
+  color: white;
+}
+
+.completed {
+  color: red;
   text-decoration: line-through;
 }
-
