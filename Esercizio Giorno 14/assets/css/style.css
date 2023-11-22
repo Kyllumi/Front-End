@@ -40,11 +40,36 @@ header {
   header {
     padding: 1em;
   }
+  h1 + img {
+    position: absolute;
+    width: 90%;
+    margin-top: -2em;
+    opacity: 0.5;
+  }
+}
+@media screen and (max-width: 800px) {
+  header {
+    padding: 1em;
+  }
+  h1 + img {
+    position: absolute;
+    left: 6%;
+    width: 70%;
+    margin-top: -2em;
+    opacity: 0.5;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   header {
     padding: 1em;
+  }
+  h1 + img {
+    position: absolute;
+    right: 2%;
+    width: 50%;
+    margin-top: -2em;
+    opacity: 0.5;
   }
 }
 
@@ -407,6 +432,13 @@ footer a {
     margin-left: auto;
     margin-right: auto;
   }
+  h1 + img {
+    position: absolute;
+    right: 20%;
+    width: 40%;
+    margin-top: -2em;
+    opacity: 0.5;
+  }
 }
 
 @media print {
@@ -511,3 +543,4 @@ aside div .fa-tag {
   right: 5%;
   font-size: 2em;
 }
+
