@@ -5,7 +5,10 @@
 }
 
 html {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 1.1em;
   color: #762304;
   text-align: center;
@@ -156,17 +159,17 @@ h2 {
     display: block;
   }
   .card button {
-    width: 80%;
+    width: 60%;
     margin: 0.5em;
   }
-  #cartaN5{
+  #cartaN5 {
     display: none;
   }
   h2 {
     margin: 1em;
     text-align: left;
   }
-  .articolo{
+  .articolo {
     padding: 1em;
   }
   .articolo img {
@@ -230,6 +233,9 @@ h2 {
   #cartaN5,
   #cartaN4 {
     display: none;
+  }
+  article {
+    width: 92%;
   }
   .articolo {
     border-radius: 20px;
