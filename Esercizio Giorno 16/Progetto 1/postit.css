@@ -1,0 +1,86 @@
+html {
+  font-family: "Indie Flower", cursive;
+  background-color: #666666;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 250px;
+  margin: 20px;
+  box-shadow: 21px 21px 11px -12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.yellow {
+  background: rgb(248, 248, 203);
+  background: linear-gradient(
+    177deg,
+    rgba(248, 248, 203, 1) 0%,
+    rgba(189, 189, 163, 1) 100%
+  );
+  transform: rotate(-5deg);
+}
+
+.green {
+  background: rgb(208, 255, 210);
+  background: linear-gradient(
+    177deg,
+    rgba(208, 255, 210, 1) 0%,
+    rgba(158, 181, 161, 1) 100%
+  );
+  transform: rotate(3deg);
+}
+
+.blue {
+  background: rgb(198, 198, 241);
+  background: linear-gradient(
+    177deg,
+    rgba(198, 198, 241, 1) 0%,
+    rgba(156, 156, 175, 1) 100%
+  );
+  transform: rotate(-4deg);
+}
+
+.box:hover {
+  transform: rotate(0deg) scale(1.2, 1.2);
+  transition: ease 1s;
+}
+
+.yellow,
+.green,
+.blue {
+  animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
