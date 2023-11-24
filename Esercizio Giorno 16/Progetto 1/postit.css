@@ -67,9 +67,11 @@ p {
   transition: ease 1s;
 }
 
-.yellow,
-.green,
-.blue {
+.box:not(:hover) {
+  transition: ease 1s;
+}
+
+.bigBox {
   animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
@@ -80,6 +82,7 @@ p {
     opacity: 0;
   }
   100% {
+    transform: scale(1);
     filter: blur(0px);
     opacity: 1;
   }
