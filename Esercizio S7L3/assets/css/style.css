@@ -11859,6 +11859,11 @@ html {
   box-sizing: border-box;
 }
 
+.modal ul li {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .modal ul li span,
 .modal ul li button.btn-primary {
   display: none;
@@ -11871,7 +11876,7 @@ html {
 
 .modal ul li button {
   position: relative;
-  left: 80%;
+  left: 70%;
   bottom: 50%;
 }
 
