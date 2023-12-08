@@ -42,39 +42,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let carrello = [];
+    let cart = document.querySelector('div.modal .modal-body ul')
 
     document.querySelector('#cards').addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-primary') {
             let compra = e.target.parentNode.parentNode.parentNode;
 
-            for (const ele of carrello) {
-                if (ele === compra) {
-
-
-                }
-            };
-
-
-
-
-            let cart = document.querySelector('div.modal .modal-body ul')
+            // Creazione elementi nel carrello
             cart.style = 'list-style: none; padding: 0;'
             let li = document.createElement('li');
             li.classList.add('d-flex', 'my-2')
             cart.appendChild(li);
             li.innerHTML += compra.innerHTML;
 
-            cart.addEventListener('click', (e) => {
-                if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-white btn-outline-danger') {
-                    let scarta = e.target.parentNode.parentNode.parentNode;
-                    scarta.remove();
-                }
-            })
+            carrello.push(li);
 
-            carrello.push(compra);
+            // Salvo elemento nel localStorage con un valore univoco
+            saveLocalStorage(li);
         }
     });
 
+    // Funzione per salvare l'elemento nel localStorage in modo univoco
+    function saveLocalStorage(element) {
+        let timestamp = new Date().getTime();
+        let univoco = `Libro_${timestamp}`;
+
+        // Imposta il valore univoco nel data-id
+        element.setAttribute('data-id', univoco);
+
+        // Aggiungere elemento nel localStorage
+        localStorage.setItem(univoco, element.innerHTML);
+    }
+
+    // Eliminare un libro dal carrello
+    cart.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-white btn-outline-danger') {
+            let scarta = e.target.parentNode.parentNode.parentNode;
+            let index = carrello.indexOf(scarta);
+
+            // Rimuovere elemento dal carrello solo se è presente
+            if (index !== -1) {
+                carrello.splice(index, 1);
+
+                // Valore univoco dal data-id
+                let univoco = scarta.getAttribute('data-id');
+
+                // Togliere elemento dal localStorage
+                localStorage.removeItem(univoco);
+
+                // Scartare elemento dal DOM
+                scarta.remove();
+            }
+        }
+    });
 });
 
 

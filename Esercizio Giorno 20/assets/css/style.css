@@ -11855,31 +11855,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html {
-  box-sizing: border-box;
+body {
+  font-family: "Spectral", serif;
 }
 
-.modal ul li span,
-.modal ul li button.btn-primary {
-  display: none;
-}
-
-.modal ul li img {
-  width: 5rem;
-  margin-right: 1rem;
-}
-
-.modal ul li button {
-  position: relative;
-  left: 80%;
-  bottom: 50%;
-}
-
-.modal ul li h5, .modal ul li .h5 {
-  font-weight: 200;
-  font-size: 95%;
-}
-
-.modal ul li p {
-  font-weight: bold;
+.icons {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */

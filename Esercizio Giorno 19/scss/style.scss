@@ -1,0 +1,95 @@
+@use 'reset';
+
+@import 'animations';
+@import 'buttons';
+@import 'color';
+@import 'font';
+@import 'mixins';
+@import 'spacings';
+
+body {
+    color: $fontColor;
+    font-family: $fontFamily;
+    font-size: $font-md*0.9;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+}
+
+.showcase {
+    background-color: $showcase;
+
+    h1 {
+        @include title-big
+    }
+
+    .showcase-content {
+        @include flex;
+
+        div {
+            width: 50%;
+        }
+
+        img {
+            width: 46%;
+        }
+
+        h1 {
+            font-size: $font-title;
+            margin-bottom: $margin-block-sm*0.5;
+        }
+
+        p {
+            margin-bottom: $margin-block-normal;
+        }
+    }
+
+    button {
+        color: $fontColor;
+        font-size: $font-sm;
+        padding: $padding-inline-sm*0.5;
+    }
+}
+
+main {
+    div {
+        @include flex;
+
+        div {
+            margin: $margin-inline-sm;
+            width: 18%;
+        }
+
+    }
+}
+
+.btn-primary {
+    background-color: map-get($buttonColor, 'btn-primary');
+}
+
+.btn-secondary {
+    background-color: map-get($buttonColor, 'btn-secondary');
+}
+
+.btn-tertiary {
+    background-color: map-get($buttonColor, 'btn-tertiary');
+}
+
+nav {
+    @include flex;
+    padding: 0 0 $padding-block-xxl*2.5 0;
+}
+
+ul {
+    @include flex;
+
+    li {
+        padding: 0 $padding-inline-sm;
+    }
+}
+
+header {
+    padding: $padding-block-lg $padding-inline-xxl ;
+}
