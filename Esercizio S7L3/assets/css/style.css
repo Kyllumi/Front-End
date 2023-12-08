@@ -11857,4 +11857,29 @@ textarea.form-control-lg {
 }
 html {
   box-sizing: border-box;
+}
+
+.modal ul li span,
+.modal ul li button.btn-primary {
+  display: none;
+}
+
+.modal ul li img {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.modal ul li button {
+  position: relative;
+  left: 80%;
+  bottom: 60%;
+}
+
+.modal ul li h5, .modal ul li .h5 {
+  font-weight: 200;
+  font-size: 95%;
+}
+
+.modal ul li p {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
