@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "email": "mudef@example.com",
+      "password": "$2a$10$B7vibEv6El8Aqbq1i0KjWePJGrdDJ8lB07RdqVVz/GbU469YEUbF.",
+      "firstname": "Darryl",
+      "lastname": "Wilkins",
+      "city": "Albuquerque",
+      "id": 1
+    },
+    {
+      "email": "jubidavoqu@example.com",
+      "password": "$2a$10$0oGLNJ.qbVvhEhK4E12EsOannWSmKbjakeh48pGpD305kv.IPUb1K",
+      "firstname": "Melissa",
+      "lastname": "Ramirez",
+      "city": "Louisville",
+      "id": 2
+    },
+    {
+      "email": "muqypese@example.com",
+      "password": "$2a$10$aPNAqAapT3Pmyq.S/3vKmeAPYHCcZWyyCGG.Mqnzudi4siEsUi3xa",
+      "firstname": "Miriam",
+      "lastname": "Rollins",
+      "city": "Atlanta",
+      "id": 3
+    },
+    {
+      "email": "zyfifosu@example.com",
+      "password": "$2a$10$ZjEMJgQzYnsE31tkA.7I0ukzu1KrwQ/fWZ48zhYuyBEDQIso4ytcC",
+      "firstname": "Sasha",
+      "lastname": "Woods",
+      "city": "New York",
+      "id": 4
+    },
+    {
+      "email": "abc1@example.com",
+      "password": "$2a$10$0a4YxJv419dfIa25Ipik1ej0.PM6Qa6.9BuQFX4PMWOpliaIRvDke",
+      "firstname": "Chandler",
+      "lastname": "Conley",
+      "city": "Doloribus cumque eaq",
+      "id": 5
+    },
+    {
+      "email": "abc2@example.com",
+      "password": "$2a$10$BAMNRbc3LeT0bSRJlzvHrO81PhhclVoUpscsgtIXm1jJkbRDjIjvi",
+      "firstname": "Gil",
+      "lastname": "Richards",
+      "city": "Commodi proident in",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "marca": "Suscipit et aut ad q",
+      "modello": "Veniam voluptate ut",
+      "quantita": "54",
+      "prezzo": "76",
+      "immagine": "https://picsum.photos/225",
+      "id": 2
+    },
+    {
+      "marca": "Sed optio officiis",
+      "modello": "Quia reprehenderit",
+      "quantita": "25",
+      "prezzo": "81",
+      "immagine": "https://picsum.photos/425",
+      "id": 3
+    },
+    {
+      "marca": "Odio ut atque saepe",
+      "modello": "Tenetur sint veniam",
+      "quantita": "97",
+      "prezzo": "55",
+      "immagine": "https://picsum.photos/444",
+      "id": 4
+    }
+  ]
+}

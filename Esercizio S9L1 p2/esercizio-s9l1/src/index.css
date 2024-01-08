@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* MIE AGGIUNTE */
+body {
+  background-color: darksalmon;
+}
+
+div.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table th {
+  text-align: start;
+}
+
+button {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  background-color: salmon;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+/* FINE MIE AGGIUNTE */
