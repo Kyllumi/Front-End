@@ -1,0 +1,2 @@
+export const urlApi = 'https://striveschool-api.herokuapp.com/api/books/'
+export const authorizationBearer = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTlhZWIyMGUwZGQxZDAwMTgyZDE2M2UiLCJpYXQiOjE3MDQ5NjA0OTMsImV4cCI6MTcwNjE3MDA5M30.Lhx-p20vjA4jJmM6ZLrtoJOeR4Oh9qVcnj-5dpBHilM";
